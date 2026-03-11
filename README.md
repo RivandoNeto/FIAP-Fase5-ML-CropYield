@@ -1,8 +1,16 @@
 # FarmTech Solutions - Previsao de Rendimento de Safra com Machine Learning
 
-**Aluno:** Rivando Bezerra Cavalcanti Neto
-**RM:** 568235
-**Curso:** FIAP - Fase 5
+**Curso:** IA - FIAP | Fase 5
+
+**Integrantes do Grupo:**
+
+| Nome | RM |
+|------|-----|
+| Joao Rafael Goncalves Ramos | rm567908 |
+| Leticia Angelim Guerra | rm567501 |
+| Matheus Guimaraes Franca | rm567144 |
+| Rivando Bezerra Cavalcanti Neto | rm568235 |
+| Tales Ferraz de Arruda Domienikan | rm567483 |
 
 ## Sobre o Projeto
 
