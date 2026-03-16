@@ -1,6 +1,7 @@
 # FarmTech Solutions - Previsao de Rendimento de Safra com Machine Learning
 
 **Curso:** IA - FIAP | Fase 5
+**Grupo:** 8 | Turma: 1TIAOR
 
 **Integrantes do Grupo:**
 
@@ -77,7 +78,7 @@ O notebook esta organizado nas seguintes secoes:
 
 ## Video Demonstrativo
 
-[Link do video no YouTube](INSERIR_LINK_AQUI)
+[Link do video no YouTube](https://youtu.be/rW4sRL_B4HM)
 
 ## Tecnologias Utilizadas
 
