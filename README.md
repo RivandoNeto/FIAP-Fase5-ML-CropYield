@@ -42,10 +42,14 @@ O dataset `crop_yield.csv` contém 155 registros de 4 culturas com as seguintes 
 ## Estrutura do Repositório
 
 ```
-ATV5_1/
 ├── README.md
 ├── crop_yield.csv
-└── RivandoBezerra_rm568235_pbl_fase4.ipynb
+├── RivandoBezerra_rm568235_pbl_fase4.ipynb
+└── ATV5_2/
+    ├── 01-sp-instancia-t3a-micro-custo.png
+    ├── 02-armazenamento-ebs-gp3-50gb.png
+    ├── 03-virginia-instancia-t3a-micro-custo.png
+    └── 04-comparacao-preco-final-sp-vs-virginia.png
 ```
 
 ## Notebook
@@ -79,9 +83,72 @@ O notebook está organizado nas seguintes seções:
    jupyter notebook RivandoBezerra_rm568235_pbl_fase4.ipynb
    ```
 
-## Vídeo Demonstrativo
+## Vídeo Demonstrativo - Entrega 1
 
 [Link do vídeo no YouTube](https://youtu.be/rW4sRL_B4HM)
+
+---
+
+## Entrega 2 — Computação em Nuvem AWS
+
+O modelo de Machine Learning da Entrega 1 precisa estar acessível via API para receber dados dos sensores em tempo real. Para isso, estimamos o custo de hospedagem em nuvem utilizando a **AWS Pricing Calculator**, comparando duas regiões da Amazon Web Services.
+
+### Serviço Utilizado
+
+**Amazon EC2** — serviço de máquinas virtuais da AWS, escolhido por permitir configurar exatamente os recursos exigidos no projeto.
+
+### Configuração da Máquina
+
+| Parâmetro | Escolha | Motivo |
+|---|---|---|
+| Instância | t3a.micro | 2 vCPUs, 1 GiB RAM, até 5 Gbps. Processador AMD, ~10% mais barato que t3 Intel |
+| Sistema Operacional | Linux | Exigido pelo enunciado |
+| Armazenamento | 50 GB EBS gp3 | gp3 é mais barato e mais performático que gp2 |
+| Modelo de cobrança | On-Demand | Exigido pelo enunciado (100%) |
+| Uso mensal | 730 horas | Funcionamento contínuo 24/7 |
+
+### Calculadora AWS
+
+**São Paulo (sa-east-1) — Custo mensal: $18,62**
+
+![Instância t3a.micro selecionada em São Paulo — $18,62/mês](ATV5_2/01-sp-instancia-t3a-micro-custo.png)
+
+**Armazenamento EBS gp3 — 50 GB**
+
+![Configuração de armazenamento EBS gp3 50 GB](ATV5_2/02-armazenamento-ebs-gp3-50gb.png)
+
+**Virgínia do Norte (us-east-1) — Custo mensal: $10,86**
+
+![Instância t3a.micro selecionada na Virgínia — $10,86/mês](ATV5_2/03-virginia-instancia-t3a-micro-custo.png)
+
+### Comparação de Custos
+
+| Região | Código | Preço Mensal |
+|---|---|---|
+| Virgínia do Norte | us-east-1 | $10,86 |
+| São Paulo | sa-east-1 | $18,62 |
+
+![Comparação de preço final — São Paulo vs Virgínia](ATV5_2/04-comparacao-preco-final-sp-vs-virginia.png)
+
+### Região Escolhida: São Paulo
+
+Apesar da Virgínia do Norte ser mais barata, a região de São Paulo foi escolhida pelos seguintes motivos:
+
+**1. Conformidade com a LGPD** — A Lei Geral de Proteção de Dados (Lei 13.709/2018) restringe o armazenamento de dados nacionais fora do território brasileiro. Hospedar os dados dos sensores no exterior configuraria risco legal para a operação da fazenda.
+
+**2. Latência** — Sensores localizados no Brasil comunicando com um servidor em São Paulo operam com latência inferior a 30ms. O mesmo servidor nos EUA elevaria essa latência para aproximadamente 200ms, comprometendo o monitoramento em tempo real.
+
+**3. Soberania dos Dados** — Dados estratégicos de produção agrícola mantidos em território nacional estão protegidos da jurisdição de leis estrangeiras, como o Patriot Act americano.
+
+### Conclusão
+
+A economia gerada pelo servidor nos EUA não compensa os riscos legais, a perda de performance e a exposição dos dados a legislações estrangeiras. São Paulo é a única opção que atende simultaneamente aos requisitos técnicos, legais e operacionais do projeto.
+
+### Vídeo Demonstrativo - Entrega 2
+
+[LINK DO YOUTUBE AQUI]
+
+---
 
 ## Tecnologias Utilizadas
 
@@ -90,3 +157,4 @@ O notebook está organizado nas seguintes seções:
 - Matplotlib e Seaborn (visualização)
 - Scikit-learn (Machine Learning)
 - Jupyter Notebook
+- AWS Pricing Calculator
