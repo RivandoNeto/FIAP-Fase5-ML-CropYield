@@ -1,4 +1,4 @@
-# FarmTech Solutions - Previsao de Rendimento de Safra com Machine Learning
+# FarmTech Solutions - Previsão de Rendimento de Safra com Machine Learning
 
 **Curso:** IA - FIAP | Fase 5
 **Grupo:** 8 | Turma: 1TIAOR
@@ -7,36 +7,36 @@
 
 | Nome | RM |
 |------|-----|
-| Joao Rafael Goncalves Ramos | rm567908 |
-| Leticia Angelim Guerra | rm567501 |
-| Matheus Guimaraes Franca | rm567144 |
+| João Rafael Gonçalves Ramos | rm567908 |
+| Letícia Angelim Guerra | rm567501 |
+| Matheus Guimarães França | rm567144 |
 | Rivando Bezerra Cavalcanti Neto | rm568235 |
 | Tales Ferraz de Arruda Domienikan | rm567483 |
 
 ## Sobre o Projeto
 
-Este projeto foi desenvolvido para a FarmTech Solutions, empresa que presta servicos de Inteligencia Artificial para uma fazenda de medio porte (200 hectares) que produz diversas culturas agricolas.
+Este projeto foi desenvolvido para a FarmTech Solutions, empresa que presta serviços de Inteligência Artificial para uma fazenda de médio porte (200 hectares) que produz diversas culturas agrícolas.
 
-O objetivo e analisar uma base de dados com informacoes de condicoes de solo e temperatura, relacionadas ao tipo de produto agricola, para:
+O objetivo é analisar uma base de dados com informações de condições de solo e temperatura, relacionadas ao tipo de produto agrícola, para:
 
-1. **Explorar os dados** e entender as relacoes entre as variaveis climaticas e o rendimento das safras
-2. **Identificar tendencias** por meio de clusterizacao (aprendizado nao supervisionado) e detectar outliers
-3. **Prever o rendimento** da safra utilizando cinco modelos de regressao supervisionada
+1. **Explorar os dados** e entender as relações entre as variáveis climáticas e o rendimento das safras
+2. **Identificar tendências** por meio de clusterização (aprendizado não supervisionado) e detectar outliers
+3. **Prever o rendimento** da safra utilizando cinco modelos de regressão supervisionada
 
 ## Dataset
 
-O dataset `crop_yield.csv` contem 155 registros de 4 culturas com as seguintes variaveis:
+O dataset `crop_yield.csv` contém 155 registros de 4 culturas com as seguintes variáveis:
 
-| Variavel | Descricao |
+| Variável | Descrição |
 |----------|-----------|
-| Crop | Nome da cultura agricola |
-| Precipitation (mm day-1) | Precipitacao em milimetros por dia |
-| Specific Humidity at 2 Meters (g/kg) | Umidade especifica a 2 metros do solo |
+| Crop | Nome da cultura agrícola |
+| Precipitation (mm day-1) | Precipitação em milímetros por dia |
+| Specific Humidity at 2 Meters (g/kg) | Umidade específica a 2 metros do solo |
 | Relative Humidity at 2 Meters (%) | Umidade relativa a 2 metros do solo |
 | Temperature at 2 Meters (C) | Temperatura a 2 metros do solo |
 | Yield | Rendimento em toneladas por hectare |
 
-## Estrutura do Repositorio
+## Estrutura do Repositório
 
 ```
 ATV5_1/
@@ -47,27 +47,27 @@ ATV5_1/
 
 ## Notebook
 
-Todo o desenvolvimento, analise e conclusoes estao documentados no Jupyter Notebook:
+Todo o desenvolvimento, análise e conclusões estão documentados no Jupyter Notebook:
 
 **[RivandoBezerra_rm568235_pbl_fase4.ipynb](./RivandoBezerra_rm568235_pbl_fase4.ipynb)**
 
-O notebook esta organizado nas seguintes secoes:
+O notebook está organizado nas seguintes seções:
 
-1. **Analise Exploratoria (EDA)** - Estatisticas descritivas, distribuicoes, correlacoes e visualizacoes
-2. **Clusterizacao** - Metodo do cotovelo, KMeans, visualizacao com PCA e deteccao de outliers
-3. **Modelos Preditivos** - Cinco algoritmos de regressao supervisionada:
-   - Regressao Linear
+1. **Análise Exploratória (EDA)** - Estatísticas descritivas, distribuições, correlações e visualizações
+2. **Clusterização** - Método do cotovelo, KMeans, visualização com PCA e detecção de outliers
+3. **Modelos Preditivos** - Cinco algoritmos de regressão supervisionada:
+   - Regressão Linear
    - Ridge Regression
    - Lasso Regression
    - Random Forest Regressor
    - Gradient Boosting Regressor
-4. **Comparacao de Modelos** - Metricas R2, MAE, MSE, RMSE e validacao cruzada
-5. **Conclusoes** - Pontos fortes, limitacoes e recomendacoes
+4. **Comparação de Modelos** - Métricas R², MAE, MSE, RMSE e validação cruzada
+5. **Conclusões** - Pontos fortes, limitações e recomendações
 
 ## Como Executar
 
 1. Certifique-se de ter Python 3.8+ instalado
-2. Instale as dependencias:
+2. Instale as dependências:
    ```bash
    pip install pandas numpy matplotlib seaborn scikit-learn
    ```
@@ -76,14 +76,14 @@ O notebook esta organizado nas seguintes secoes:
    jupyter notebook RivandoBezerra_rm568235_pbl_fase4.ipynb
    ```
 
-## Video Demonstrativo
+## Vídeo Demonstrativo
 
-[Link do video no YouTube](https://youtu.be/rW4sRL_B4HM)
+[Link do vídeo no YouTube](https://youtu.be/rW4sRL_B4HM)
 
 ## Tecnologias Utilizadas
 
 - Python 3
-- Pandas e NumPy (manipulacao de dados)
-- Matplotlib e Seaborn (visualizacao)
+- Pandas e NumPy (manipulação de dados)
+- Matplotlib e Seaborn (visualização)
 - Scikit-learn (Machine Learning)
 - Jupyter Notebook
