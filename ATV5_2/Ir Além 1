@@ -1,6 +1,9 @@
-**CÓDIGO FONTES:**
-sketch.ino:
-*
+## **CÓDIGO FONTES:**
+
+### sketch.ino:
+
+```cpp
+/*
  * FARMTECH SOLUTIONS - ESP32 para ThingSpeak
  * Monitoramento ambiental com envio de dados para nuvem
  */
@@ -152,8 +155,13 @@ void enviarParaThingSpeak() {
 
   http.end(); // libera recursos
 }
+```
 
-diagram.json:
+---
+
+### diagram.json:
+
+```json
 {
   "version": 1,
   "author": "FarmTech Solutions",
@@ -203,27 +211,32 @@ diagram.json:
   ],
   "dependencies": {}
 }
+```
 
-**Justificativa Técnica do Projeto FarmTech Solutions**
+---
+
+## **Justificativa Técnica do Projeto FarmTech Solutions**
 
 O projeto FarmTech Solutions objetiva desenvolver um sistema de monitoramento ambiental baseado em IoT, utilizando o microcontrolador ESP32 integrado à plataforma ThingSpeak, para aquisição, exibição local e armazenamento em nuvem de variáveis ambientais críticas ao cultivo agrícola: temperatura, umidade relativa e luminosidade.
 
-Seleção dos Sensores
+### Seleção dos Sensores
 
-O sensor DHT22 foi selecionado por oferecer medição simultânea de temperatura (±0,5°C) e umidade (±2–5%), com faixa adequada a ambientes agrícolas, baixo custo e interface digital simples (1-wire), facilitando a integração com o ESP32. Comparativamente ao DHT11 (menor precisão) e ao BME280 (maior custo e complexidade), apresenta melhor relação custo-benefício para prototipagem.
+O sensor **DHT22** foi selecionado por oferecer medição simultânea de temperatura (±0,5°C) e umidade (±2–5%), com faixa adequada a ambientes agrícolas, baixo custo e interface digital simples (1-wire), facilitando a integração com o ESP32. Comparativamente ao DHT11 (menor precisão) e ao BME280 (maior custo e complexidade), apresenta melhor relação custo-benefício para prototipagem.
 
-O LDR (fotoresistor) foi adotado por sua simplicidade de implementação via entrada analógica do ESP32, baixo custo e capacidade de detectar variações relativas de luminosidade, suficientes para caracterização de microclima. Embora não forneça valores absolutos em lux (como o BH1750), atende ao objetivo de monitoramento qualitativo.
+O **LDR (fotoresistor)** foi adotado por sua simplicidade de implementação via entrada analógica do ESP32, baixo custo e capacidade de detectar variações relativas de luminosidade, suficientes para caracterização de microclima. Embora não forneça valores absolutos em lux (como o BH1750), atende ao objetivo de monitoramento qualitativo.
 
-Contribuição para os Objetivos
+### Contribuição para os Objetivos
 
 Os dados coletados caracterizam o microclima do ambiente, permitindo identificar padrões temporais, anomalias e condições ideais de cultivo. O envio periódico para ThingSpeak (intervalo de 15s) garante histórico para análise retrospectiva e base para automações futuras.
 
-Considerações Metrológicas
+### Considerações Metrológicas
 
 As limitações de precisão dos sensores são mitigadas por validação de leituras inválidas (NaN) e uso de médias temporais. Para aplicações críticas, calibração comparativa e sensores mais precisos são recomendados.
 
-Conclusão
+### Conclusão
 
 A arquitetura escolhida valida conceitualmente a aplicação de IoT na agricultura, priorizando acessibilidade, funcionalidade e escalabilidade, com potencial para evolução em sistemas de automação agrícola.
 
 [Link do vídeo no YT]
+
+
