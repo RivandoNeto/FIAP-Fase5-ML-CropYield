@@ -2,7 +2,6 @@
 
 ### sketch.ino:
 
-```cpp
 /*
  * FARMTECH SOLUTIONS - ESP32 para ThingSpeak
  * Monitoramento ambiental com envio de dados para nuvem
